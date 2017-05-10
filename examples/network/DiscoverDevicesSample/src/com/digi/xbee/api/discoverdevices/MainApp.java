@@ -18,6 +18,10 @@ package com.digi.xbee.api.discoverdevices;
 import com.digi.xbee.api.XBeeDevice;
 import com.digi.xbee.api.XBeeNetwork;
 import com.digi.xbee.api.exceptions.XBeeException;
+import com.digi.xbee.api.listeners.IDataReceiveListener;
+import com.digi.xbee.api.listeners.IPacketReceiveListener;
+import com.digi.xbee.api.models.XBeeMessage;
+import com.digi.xbee.api.packet.XBeePacket;
 
 /**
  * XBee Java Library Discover Devices sample application.
@@ -30,12 +34,14 @@ import com.digi.xbee.api.exceptions.XBeeException;
  */
 public class MainApp {
 
+	static int count = 0;
+
 	/* Constants */
 	
 	// TODO Replace with the serial port where your module is connected to.
-	private static final String PORT = "COM1";
+	private static final String PORT = "/dev/cu.usbserial-A5056ZT6";
 	// TODO Replace with the baud rate of your module.
-	private static final int BAUD_RATE = 9600;
+	private static final int BAUD_RATE = 230400;
 	
 	/**
 	 * Application main method.
@@ -52,15 +58,24 @@ public class MainApp {
 		try {
 			myDevice.open();
 			
-			XBeeNetwork myXBeeNetwork = myDevice.getNetwork();
+			myDevice.addDataListener(new IDataReceiveListener() {
+				
+				@Override
+				public void dataReceived(XBeeMessage xbeeMessage) {
+					System.err.println((count++) + ": received: " + xbeeMessage.getDataString());
+				}
+			});
+			System.err.println("Opened device: " + myDevice);
 			
-			myXBeeNetwork.setDiscoveryTimeout(15000);
-			
-			myXBeeNetwork.addDiscoveryListener(new MyDiscoveryListener());
-			
-			myXBeeNetwork.startDiscoveryProcess();
-			
-			System.out.println("\n>> Discovering remote XBee devices...");
+//			XBeeNetwork myXBeeNetwork = myDevice.getNetwork();
+//			
+//			myXBeeNetwork.setDiscoveryTimeout(15000);
+//			
+//			myXBeeNetwork.addDiscoveryListener(new MyDiscoveryListener());
+//			
+//			myXBeeNetwork.startDiscoveryProcess();
+//			
+//			System.out.println("\n>> Discovering remote XBee devices...");
 			
 		} catch (XBeeException e) {
 			e.printStackTrace();

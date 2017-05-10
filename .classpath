@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="examples/communication/cellular/ReceiveSMSSample/src"/>
+	<classpathentry kind="src" path="examples/communication/cellular/SendSMSSample/src"/>
+	<classpathentry kind="src" path="examples/communication/explicit/ReceiveExplicitDataPollingSample/src"/>
+	<classpathentry kind="src" path="examples/communication/explicit/ReceiveExplicitDataSample/src"/>
+	<classpathentry kind="src" path="examples/communication/explicit/SendBroadcastExplicitDataSample/src"/>
+	<classpathentry kind="src" path="examples/communication/explicit/SendExplicitDataAsyncSample/src"/>
+	<classpathentry kind="src" path="examples/communication/explicit/SendExplicitDataSample/src"/>
+	<classpathentry kind="src" path="examples/communication/ip/ConnectToEchoServerSample/src"/>
+	<classpathentry kind="src" path="examples/communication/ip/KnockKnockSample/src"/>
+	<classpathentry kind="src" path="examples/communication/ip/ReceiveIPDataSample/src"/>
+	<classpathentry kind="src" path="examples/communication/ip/SendIPDataSample/src"/>
+	<classpathentry kind="src" path="examples/communication/ReceiveDataPollingSample/src"/>
+	<classpathentry kind="src" path="examples/communication/ReceiveDataSample/src"/>
+	<classpathentry kind="src" path="examples/communication/ReceiveModemStatusSample/src"/>
+	<classpathentry kind="src" path="examples/communication/SendBroadcastDataSample/src"/>
+	<classpathentry kind="src" path="examples/communication/SendDataAsyncSample/src"/>
+	<classpathentry kind="src" path="examples/communication/SendDataSample/src"/>
+	<classpathentry kind="src" path="examples/configuration/ConnectToAccessPointSample/src"/>
+	<classpathentry kind="src" path="examples/configuration/ManageCommonParametersSample/src"/>
+	<classpathentry kind="src" path="examples/configuration/ResetModuleSample/src"/>
+	<classpathentry kind="src" path="examples/configuration/SetAndGetParametersSample/src"/>
+	<classpathentry kind="src" path="examples/io/IOSamplingSample/src"/>
+	<classpathentry kind="src" path="examples/io/LocalADCSample/src"/>
+	<classpathentry kind="src" path="examples/io/LocalDIOSample/src"/>
+	<classpathentry kind="src" path="examples/io/RemoteADCSample/src"/>
+	<classpathentry kind="src" path="examples/io/RemoteDIOSample/src"/>
+	<classpathentry kind="src" path="examples/network/DiscoverDevicesSample/src"/>
+	<classpathentry kind="src" path="src/main"/>
+	<classpathentry kind="lib" path="extra-libs/android-sdk-5.1.1.jar"/>
+	<classpathentry kind="lib" path="extra-libs/android-sdk-addon-3.jar"/>
+	<classpathentry kind="lib" path="extra-libs/rxtx-2.2.jar"/>
+	<classpathentry kind="lib" path="extra-libs/slf4j-api-1.7.12.jar"/>
+	<classpathentry kind="lib" path="extra-libs/slf4j-simple-1.7.12.jar"/>
+	<classpathentry kind="lib" path="xbee-java-library-1.2.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="XBJL/extra-libs/native"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

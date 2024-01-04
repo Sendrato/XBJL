@@ -1,7 +1,8 @@
 repo_name: Sendrato/XBJL
 report_id: 2c7b03a33b0903594d388c4fc8f4c74e
+version: 0.1
 repo_type: Public
-timestamp: '2023-11-09T15:19:08+00:00'
+timestamp: '2024-01-04T14:59:03+00:00'
 requested_by: aschoneveld
 provider: github
 branch: master
@@ -16,6 +17,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/995/K85ZWV2F.png
+  detection_source_url: https://github.com/Sendrato/XBJL
   detection_source: Repo Metadata
 - name: Git
   description: Fast, scalable, distributed revision control system
@@ -25,4 +27,5 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/Sendrato/XBJL
   detection_source: Repo Metadata
